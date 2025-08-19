@@ -224,481 +224,414 @@
         </div>
     </div>
 
-    <!-- Login Page (Initially Visible) -->
-    <div id="login-page">
-        <div class="login-container">
-            <div class="login-header">
-                <h3><i class="fas fa-leaf me-2"></i>KrishiYojak</h3>
-                <p class="mb-0">किसानों का डिजिटल सहयोगी</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-leaf me-2"></i>KrishiYojak
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> होम</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-info-circle me-1"></i> जानकारी</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-map-marked-alt me-1"></i> क्षेत्रानुसार सलाह</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-rupee-sign me-1"></i> बाजार भाव</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-phone-alt me-1"></i> संपर्क</a>
+                    </li>
+                </ul>
             </div>
-            <div class="login-form">
-                <div class="text-center mb-4">
-                    <h4>लॉग इन करें</h4>
-                    <p class="text-muted">अपने खाते में प्रवेश करें</p>
-                </div>
-                <form id="loginForm">
-                    <div class="mb-3">
-                        <label for="loginEmail" class="form-label">ईमेल पता</label>
-                        <input type="email" class="form-control" id="loginEmail" placeholder="आपका ईमेल" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="loginPassword" class="form-label">पासवर्ड</label>
-                        <input type="password" class="form-control" id="loginPassword" placeholder="आपका पासवर्ड" required>
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">मुझे याद रखें</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100 mb-3">लॉग इन</button>
-                    <div class="text-center">
-                        <p class="mb-0">खाता नहीं है? <a href="#" id="show-signup">साइन अप करें</a></p>
-                    </div>
-                </form>
+        </div>
+    </nav>
 
-                <form id="signupForm" style="display: none;">
-                    <div class="text-center mb-4">
-                        <h4>नया खाता बनाएं</h4>
-                        <p class="text-muted">KrishiYojak में साइन अप करें</p>
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 mb-4">अपनी फसल योजना बनाएं, अधिक लाभ कमाएं</h1>
+            <p class="lead mb-4">क्षेत्र विशेष के अनुसार सही फसल चुनने में आपकी मदद करता है KrishiYojak</p>
+            <a href="#crop-form" class="btn btn-light btn-lg px-4 pulse">
+                <i class="fas fa-seedling me-2"></i>अभी शुरू करें
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Region-specific advice -->
+        <div class="region-highlight">
+            <h4><i class="fas fa-map-marker-alt me-2"></i> क्षेत्रानुसार कृषि सलाह</h4>
+            <p>भारत के विभिन्न क्षेत्रों में अलग-अलग जलवायु और मिट्टी के प्रकार होते हैं। हम आपके specific क्षेत्र के अनुसार सटीक सलाह प्रदान करते हैं।</p>
+            <div class="row mt-3">
+                <div class="col-md-3 col-6">
+                    <div class="card">
+                        <div class="card-body text-center py-3">
+                            <i class="fas fa-tint fs-1 text-primary"></i>
+                            <h6 class="mt-2">उत्तरी क्षेत्र</h6>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="signupName" class="form-label">पूरा नाम</label>
-                        <input type="text" class="form-control" id="signupName" placeholder="आपका पूरा नाम" required>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card">
+                        <div class="card-body text-center py-3">
+                            <i class="fas fa-sun fs-1 text-warning"></i>
+                            <h6 class="mt-2">दक्षिणी क्षेत्र</h6>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="signupEmail" class="form-label">ईमेल पता</label>
-                        <input type="email" class="form-control" id="signupEmail" placeholder="आपका ईमेल" required>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card">
+                        <div class="card-body text-center py-3">
+                            <i class="fas fa-mountain fs-1 text-success"></i>
+                            <h6 class="mt-2">पूर्वी क्षेत्र</h6>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="signupPassword" class="form-label">पासवर्ड</label>
-                        <input type="password" class="form-control" id="signupPassword" placeholder="मजबूत पासवर्ड" required>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="card">
+                        <div class="card-body text-center py-3">
+                            <i class="fas fa-cloud-sun fs-1 text-info"></i>
+                            <h6 class="mt-2">पश्चिमी क्षेत्र</h6>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="signupConfirmPassword" class="form-label">पासवर्ड की पुष्टि करें</label>
-                        <input type="password" class="form-control" id="signupConfirmPassword" placeholder="पासवर्ड दोबारा दर्ज करें" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="row mb-5">
+            <div class="col-md-4 feature-item">
+                <div class="text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100 mb-3">साइन अप</button>
+                    <h4>मौसम अनुसार सलाह</h4>
+                    <p>वर्तमान मौसम और आगामी मौसम की स्थिति के आधार पर फसल सुझाव</p>
+                </div>
+            </div>
+            <div class="col-md-4 feature-item">
+                <div class="text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h4>लाभ का अनुमान</h4>
+                    <p>विभिन्न फसलों से संभावित लाभ की गणना और तुलना</p>
+                </div>
+            </div>
+            <div class="col-md-4 feature-item">
+                <div class="text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h4>जल संसाधन प्रबंधन</h4>
+                    <p>आपकी सिंचाई सुविधा के अनुसार उपयुक्त फसलों की सिफारिश</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="card mb-5" id="crop-form">
+            <div class="card-header text-center py-3">
+                <h4><i class="fas fa-calculator me-2"></i>क्षेत्रानुसार फसल योजना कैलकुलेटर</h4>
+            </div>
+            <div class="card-body">
+                <form id="cropPlanningForm">
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5 class="mb-3"><i class="fas fa-map-marker-alt me-2"></i>आपका स्थान</h5>
+                            <div class="mb-3">
+                                <label class="form-label">राज्य</label>
+                                <select class="form-select" id="state" required>
+                                    <option value="" selected disabled>राज्य चुनें</option>
+                                    <option value="up">उत्तर प्रदेश</option>
+                                    <option value="mh">महाराष्ट्र</option>
+                                    <option value="pb">पंजाब</option>
+                                    <option value="br">बिहार</option>
+                                    <option value="gj">गुजरात</option>
+                                    <option value="tg">तेलंगाना</option>
+                                    <option value="ap">आंध्र प्रदेश</option>
+                                    <option value="tn">तमिलनाडु</option>
+                                    <option value="kr">कर्नाटक</option>
+                                    <option value="rj">राजस्थान</option>
+                                    <option value="mp">मध्य प्रदेश</option>
+                                    <option value="wb">पश्चिम बंगाल</option>
+                                    <option value="hr">हरियाणा</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">जिला</label>
+                                <select class="form-select" id="district" required>
+                                    <option value="" selected disabled>पहले राज्य चुनें</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">गाँव/तहसील</label>
+                                <input type="text" class="form-control" placeholder="गाँव या तहसील का नाम" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="mb-3"><i class="fas fa-tractor me-2"></i>आपकी जमीन</h5>
+                            <div class="mb-3">
+                                <label class="form-label">जमीन का आकार (एकड़ में)</label>
+                                <input type="number" class="form-control" placeholder="जैसे: 2" min="0.1" step="0.1" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">मिट्टी का प्रकार</label>
+                                <div>
+                                    <button type="button" class="btn btn-outline-secondary soil-type-btn" data-type="loam">
+                                        <i class="fas fa-square me-2" style="color: #795548;"></i>दोमट मिट्टी
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary soil-type-btn" data-type="sandy">
+                                        <i class="fas fa-square me-2" style="color: #ffeb3b;"></i>बलुई मिट्टी
+                                    </button>
+                                    <button type="button" class="btn btn-outline-secondary soil-type-btn" data-type="clay">
+                                        <i class="fas fa-square me-2" style="color: #8d6e63;"></i>चिकनी मिट्टी
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6">
+                            <h5 class="mb-3"><i class="fas fa-cloud-sun me-2"></i>मौसम और समय</h5>
+                            <div class="mb-3">
+                                <label class="form-label">मौसम</label>
+                                <select class="form-select" id="season" required>
+                                    <option value="" selected disabled>मौसम चुनें</option>
+                                    <option value="rabi">रबी</option>
+                                    <option value="kharif">खरीफ</option>
+                                    <option value="zaid">जायद</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">माह</label>
+                                <select class="form-select" id="month" required>
+                                    <option value="" selected disabled>माह चुनें</option>
+                                    <option value="jan">जनवरी</option>
+                                    <option value="feb">फरवरी</option>
+                                    <option value="mar">मार्च</option>
+                                    <option value="apr">अप्रैल</option>
+                                    <option value="may">मई</option>
+                                    <option value="jun">जून</option>
+                                    <option value="jul">जुलाई</option>
+                                    <option value="aug">अगस्त</option>
+                                    <option value="sep">सितम्बर</option>
+                                    <option value="oct">अक्टूबर</option>
+                                    <option value="nov">नवम्बर</option>
+                                    <option value="dec">दिसम्बर</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="mb-3"><i class="fas fa-tint me-2"></i>पानी की सुविधा</h5>
+                            <div class="mb-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="waterOption" id="irrigation" value="irrigation" checked>
+                                    <label class="form-check-label" for="irrigation">
+                                        सिंचाई सुविधा उपलब्ध
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="waterOption" id="rainfed" value="rainfed">
+                                    <label class="form-check-label" for="rainfed">
+                                        वर्षा आधारित खेती
+                                    </label>
+                                </div>
+                            </div>
+                            <h5 class="mb-3"><i class="fas fa-star me-2"></i>आपकी प्राथमिकता</h5>
+                            <div class="mb-3">
+                                <select class="form-select" id="preference" required>
+                                    <option value="" selected disabled>प्राथमिकता चुनें</option>
+                                    <option value="profit">अधिकतम लाभ</option>
+                                    <option value="lessWater">कम पानी की आवश्यकता</option>
+                                    <option value="lessTime">कम समय वाली फसल</option>
+                                    <option value="organic">जैविक खेती</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="text-center">
-                        <p class="mb-0">पहले से खाता है? <a href="#" id="show-login">लॉग इन करें</a></p>
+                        <button type="submit" class="btn btn-primary btn-lg px-5">
+                            <i class="fas fa-calculator me-2"></i>फसल सुझाव प्राप्त करें
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div class="recommendation-section" id="results-section" style="display: none;">
+            <h3 class="text-center mb-4"><i class="fas fa-check-circle me-2"></i>आपके क्षेत्र और परिस्थितियों के लिए फसल सुझाव</h3>
+            <div class="alert alert-info">
+                <i class="fas fa-info-circle me-2"></i>ये सुझाव आपके चयनित <strong id="selected-region">क्षेत्र</strong> की मिट्टी, जलवायु और मौसम के अनुसार दिए गए हैं।
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card crop-card">
+                        <div class="card-body">
+                            <h5 class="card-title">टमाटर</h5>
+                            <div class="text-center my-3">
+                                <i class="fas fa-apple-alt fa-3x" style="color: #f44336;"></i>
+                            </div>
+                            <p><i class="fas fa-rupee-sign me-2"></i><strong>अनुमानित लाभ:</strong> <span class="text-success">₹42,500 प्रति एकड़</span></p>
+                            <p><i class="fas fa-clock me-2"></i><strong>समय अवधि:</strong> 90-100 दिन</p>
+                            <p><i class="fas fa-tint me-2"></i><strong>पानी की आवश्यकता:</strong> मध्यम</p>
+                            <p><i class="fas fa-map-marker-alt me-2"></i><strong>उपयुक्त क्षेत्र:</strong> महाराष्ट्र, कर्नाटक, आंध्र प्रदेश</p>
+                            <button class="btn btn-outline-primary mt-2 w-100">विस्तृत जानकारी</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card crop-card">
+                        <div class="card-body">
+                            <h5 class="card-title">मूंग दाल</h5>
+                            <div class="text-center my-3">
+                                <i class="fas fa-seedling fa-3x" style="color: #8bc34a;"></i>
+                            </div>
+                            <p><i class="fas fa-rupee-sign me-2"></i><strong>अनुमानित लाभ:</strong> <span class="text-success">₹35,000 प्रति एकड़</span></p>
+                            <p><i class="fas fa-clock me-2"></i><strong>समय अवधि:</strong> 60-70 दिन</p>
+                            <p><i class="fas fa-tint me-2"></i><strong>पानी की आवश्यकता:</strong> कम</p>
+                            <p><i class="fas fa-map-marker-alt me-2"></i><strong>उपयुक्त क्षेत्र:</strong> उत्तर प्रदेश, मध्य प्रदेश, राजस्थान</p>
+                            <button class="btn btn-outline-primary mt-2 w-100">विस्तृत जानकारी</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card crop-card">
+                        <div class="card-body">
+                            <h5 class="card-title">भिंडी</h5>
+                            <div class="text-center my-3">
+                                <i class="fas fa-leaf fa-3x" style="color: #4caf50;"></i>
+                            </div>
+                            <p><i class="fas fa-rupee-sign me-2"></i><strong>अनुमानित लाभ:</strong> <span class="text-success">₹38,000 प्रति एकड़</span></p>
+                            <p><i class="fas fa-clock me-2"></i><strong>समय अवधि:</strong> 45-50 दिन</p>
+                            <p><i class="fas fa-tint me-2"></i><strong>पानी की आवश्यकता:</strong> मध्यम</p>
+                            <p><i class="fas fa-map-marker-alt me-2"></i><strong>उपयुक्त क्षेत्र:</strong> गुजरात, पश्चिम बंगाल, बिहार</p>
+                            <button class="btn btn-outline-primary mt-2 w-100">विस्तृत जानकारी</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button class="btn btn-primary me-2"><i class="fas fa-download me-2"></i>रिपोर्ट डाउनलोड करें</button>
+                <button class="btn btn-outline-secondary" id="reset-form"><i class="fas fa-redo me-2"></i>नई जानकारी दर्ज करें</button>
+            </div>
+        </div>
+
+        <!-- Additional Information Section -->
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">बाजार भाव</div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>फसल</th>
+                                    <th>मूल्य (प्रति क्विंटल)</th>
+                                    <th>परिवर्तन</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>गेहूँ</td>
+                                    <td>₹2,100</td>
+                                    <td class="text-success">+2%</td>
+                                </tr>
+                                <tr>
+                                    <td>चावल</td>
+                                    <td>₹1,850</td>
+                                    <td class="text-danger">-1%</td>
+                                </tr>
+                                <tr>
+                                    <td>टमाटर</td>
+                                    <td>₹800</td>
+                                    <td class="text-success">+5%</td>
+                                </tr>
+                                <tr>
+                                    <td>आलू</td>
+                                    <td>₹600</td>
+                                    <td class="text-success">+3%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">मौसम पूर्वानुमान</div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">अगले 7 दिन</h5>
+                            <span class="badge bg-primary">मध्यम वर्षा संभावना</span>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col">
+                                <p>आज</p>
+                                <i class="fas fa-sun fs-1 text-warning"></i>
+                                <p>32°C</p>
+                            </div>
+                            <div class="col">
+                                <p>कल</p>
+                                <i class="fas fa-cloud-sun fs-1 text-secondary"></i>
+                                <p>31°C</p>
+                            </div>
+                            <div class="col">
+                                <p>परसों</p>
+                                <i class="fas fa-cloud-rain fs-1 text-info"></i>
+                                <p>28°C</p>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <p><i class="fas fa-info-circle me-2"></i>अगले सप्ताह हल्की से मध्यम वर्षा की संभावना है, बुवाई के लिए अच्छा समय है।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Main Website Content (Initially Hidden) -->
-    <div id="main-website" style="display: none;">
-        <!-- Navigation Bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <i class="fas fa-leaf me-2"></i>KrishiYojak
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#"><i class="fas fa-home me-1"></i> होम</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-info-circle me-1"></i> जानकारी</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-map-marked-alt me-1"></i> क्षेत्रानुसार सलाह</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-rupee-sign me-1"></i> बाजार भाव</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-phone-alt me-1"></i> संपर्क</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" id="logout-btn"><i class="fas fa-sign-out-alt me-1"></i> लॉगआउट</a>
-                        </li>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5>KrishiYojak</h5>
+                    <p>किसानों की बेहतरी के लिए समर्पित</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5>जरूरी लिंक</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">हमारे बारे में</a></li>
+                        <li><a href="#" class="text-white">नियम और शर्तें</a></li>
+                        <li><a href="#" class="text-white">गोपनीयता नीति</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-
-        <!-- Hero Section -->
-        <section class="hero-section text-center">
-            <div class="container">
-                <h1 class="display-4 mb-4">अपनी फसल योजना बनाएं, अधिक लाभ कमाएं</h1>
-                <p class="lead mb-4">क्षेत्र विशेष के अनुसार सही फसल चुनने में आपकी मदद करता है KrishiYojak</p>
-                <a href="#crop-form" class="btn btn-light btn-lg px-4 pulse">
-                    <i class="fas fa-seedling me-2"></i>अभी शुरू करें
-                </a>
-            </div>
-        </section>
-
-        <!-- Main Content -->
-        <div class="container">
-            <!-- Region-specific advice -->
-            <div class="region-highlight">
-                <h4><i class="fas fa-map-marker-alt me-2"></i> क्षेत्रानुसार कृषि सलाह</h4>
-                <p>भारत के विभिन्न क्षेत्रों में अलग-अलग जलवायु और मिट्टी के प्रकार होते हैं। हम आपके specific क्षेत्र के अनुसार सटीक सलाह प्रदान करते हैं।</p>
-                <div class="row mt-3">
-                    <div class="col-md-3 col-6">
-                        <div class="card">
-                            <div class="card-body text-center py-3">
-                                <i class="fas fa-tint fs-1 text-primary"></i>
-                                <h6 class="mt-2">उत्तरी क्षेत्र</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="card">
-                            <div class="card-body text-center py-3">
-                                <i class="fas fa-sun fs-1 text-warning"></i>
-                                <h6 class="mt-2">दक्षिणी क्षेत्र</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="card">
-                            <div class="card-body text-center py-3">
-                                <i class="fas fa-mountain fs-1 text-success"></i>
-                                <h6 class="mt-2">पूर्वी क्षेत्र</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-6">
-                        <div class="card">
-                            <div class="card-body text-center py-3">
-                                <i class="fas fa-cloud-sun fs-1 text-info"></i>
-                                <h6 class="mt-2">पश्चिमी क्षेत्र</h6>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-md-4 mb-3">
+                    <h5>संपर्क करें</h5>
+                    <p><i class="fas fa-phone me-2"></i>+91 9876543210</p>
+                    <p><i class="fas fa-envelope me-2"></i>support@krishiyojak.com</p>
                 </div>
             </div>
-
-            <!-- Features Section -->
-            <div class="row mb-5">
-                <div class="col-md-4 feature-item">
-                    <div class="text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <h4>मौसम अनुसार सलाह</h4>
-                        <p>वर्तमान मौसम और आगामी मौसम की स्थिति के आधार पर फसल सुझाव</p>
-                    </div>
-                </div>
-                <div class="col-md-4 feature-item">
-                    <div class="text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-rupee-sign"></i>
-                        </div>
-                        <h4>लाभ का अनुमान</h4>
-                        <p>विभिन्न फसलों से संभावित लाभ की गणना और तुलना</p>
-                    </div>
-                </div>
-                <div class="col-md-4 feature-item">
-                    <div class="text-center">
-                        <div class="feature-icon">
-                            <i class="fas fa-tint"></i>
-                        </div>
-                        <h4>जल संसाधन प्रबंधन</h4>
-                        <p>आपकी सिंचाई सुविधा के अनुसार उपयुक्त फसलों की सिफारिश</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Form Section -->
-            <div class="card mb-5" id="crop-form">
-                <div class="card-header text-center py-3">
-                    <h4><i class="fas fa-calculator me-2"></i>क्षेत्रानुसार फसल योजना कैलकुलेटर</h4>
-                </div>
-                <div class="card-body">
-                    <form id="cropPlanningForm">
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <h5 class="mb-3"><i class="fas fa-map-marker-alt me-2"></i>आपका स्थान</h5>
-                                <div class="mb-3">
-                                    <label class="form-label">राज्य</label>
-                                    <select class="form-select" id="state" required>
-                                        <option value="" selected disabled>राज्य चुनें</option>
-                                        <option value="up">उत्तर प्रदेश</option>
-                                        <option value="mh">महाराष्ट्र</option>
-                                        <option value="pb">पंजाब</option>
-                                        <option value="br">बिहार</option>
-                                        <option value="gj">गुजरात</option>
-                                        <option value="tg">तेलंगाना</option>
-                                        <option value="ap">आंध्र प्रदेश</option>
-                                        <option value="tn">तमिलनाडु</option>
-                                        <option value="kr">कर्नाटक</option>
-                                        <option value="rj">राजस्थान</option>
-                                        <option value="mp">मध्य प्रदेश</option>
-                                        <option value="wb">पश्चिम बंगाल</option>
-                                        <option value="hr">हरियाणा</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">जिला</label>
-                                    <select class="form-select" id="district" required>
-                                        <option value="" selected disabled>पहले राज्य चुनें</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">गाँव/तहसील</label>
-                                    <input type="text" class="form-control" placeholder="गाँव या तहसील का नाम" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5 class="mb-3"><i class="fas fa-tractor me-2"></i>आपकी जमीन</h5>
-                                <div class="mb-3">
-                                    <label class="form-label">जमीन का आकार (एकड़ में)</label>
-                                    <input type="number" class="form-control" placeholder="जैसे: 2" min="0.1" step="0.1" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">मिट्टी का प्रकार</label>
-                                    <div>
-                                        <button type="button" class="btn btn-outline-secondary soil-type-btn" data-type="loam">
-                                            <i class="fas fa-square me-2" style="color: #795548;"></i>दोमट मिट्टी
-                                        </button>
-                                        <button type="button" class="btn btn-outline-secondary soil-type-btn" data-type="sandy">
-                                            <i class="fas fa-square me-2" style="color: #ffeb3b;"></i>बलुई मिट्टी
-                                        </button>
-                                        <button type="button" class="btn btn-outline-secondary soil-type-btn" data-type="clay">
-                                            <i class="fas fa-square me-2" style="color: #8d6e63;"></i>चिकनी मिट्टी
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-4">
-                            <div class="col-md-6">
-                                <h5 class="mb-3"><i class="fas fa-cloud-sun me-2"></i>मौसम और समय</h5>
-                                <div class="mb-3">
-                                    <label class="form-label">मौसम</label>
-                                    <select class="form-select" id="season" required>
-                                        <option value="" selected disabled>मौसम चुनें</option>
-                                        <option value="rabi">रबी</option>
-                                        <option value="kharif">खरीफ</option>
-                                        <option value="zaid">जायद</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label">माह</label>
-                                    <select class="form-select" id="month" required>
-                                        <option value="" selected disabled>माह चुनें</option>
-                                        <option value="jan">जनवरी</option>
-                                        <option value="feb">फरवरी</option>
-                                        <option value="mar">मार्च</option>
-                                        <option value="apr">अप्रैल</option>
-                                        <option value="may">मई</option>
-                                        <option value="jun">जून</option>
-                                        <option value="jul">जुलाई</option>
-                                        <option value="aug">अगस्त</option>
-                                        <option value="sep">सितम्बर</option>
-                                        <option value="oct">अक्टूबर</option>
-                                        <option value="nov">नवम्बर</option>
-                                        <option value="dec">दिसम्बर</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <h5 class="mb-3"><i class="fas fa-tint me-2"></i>पानी की सुविधा</h5>
-                                <div class="mb-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="waterOption" id="irrigation" value="irrigation" checked>
-                                        <label class="form-check-label" for="irrigation">
-                                            सिंचाई सुविधा उपलब्ध
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="waterOption" id="rainfed" value="rainfed">
-                                        <label class="form-check-label" for="rainfed">
-                                            वर्षा आधारित खेती
-                                        </label>
-                                    </div>
-                                </div>
-                                <h5 class="mb-3"><i class="fas fa-star me-2"></i>आपकी प्राथमिकता</h5>
-                                <div class="mb-3">
-                                    <select class="form-select" id="preference" required>
-                                        <option value="" selected disabled>प्राथमिकता चुनें</option>
-                                        <option value="profit">अधिकतम लाभ</option>
-                                        <option value="lessWater">कम पानी की आवश्यकता</option>
-                                        <option value="lessTime">कम समय वाली फसल</option>
-                                        <option value="organic">जैविक खेती</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary btn-lg px-5">
-                                <i class="fas fa-calculator me-2"></i>फसल सुझाव प्राप्त करें
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Results Section (Initially Hidden) -->
-            <div class="recommendation-section" id="results-section" style="display: none;">
-                <h3 class="text-center mb-4"><i class="fas fa-check-circle me-2"></i>आपके क्षेत्र और परिस्थितियों के लिए फसल सुझाव</h3>
-                <div class="alert alert-info">
-                    <i class="fas fa-info-circle me-2"></i>ये सुझाव आपके चयनित <strong id="selected-region">क्षेत्र</strong> की मिट्टी, जलवायु और मौसम के अनुसार दिए गए हैं।
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card crop-card">
-                            <div class="card-body">
-                                <h5 class="card-title">टमाटर</h5>
-                                <div class="text-center my-3">
-                                    <i class="fas fa-apple-alt fa-3x" style="color: #f44336;"></i>
-                                </div>
-                                <p><i class="fas fa-rupee-sign me-2"></i><strong>अनुमानित लाभ:</strong> <span class="text-success">₹42,500 प्रति एकड़</span></p>
-                                <p><i class="fas fa-clock me-2"></i><strong>समय अवधि:</strong> 90-100 दिन</p>
-                                <p><i class="fas fa-tint me-2"></i><strong>पानी की आवश्यकता:</strong> मध्यम</p>
-                                <p><i class="fas fa-map-marker-alt me-2"></i><strong>उपयुक्त क्षेत्र:</strong> महाराष्ट्र, कर्नाटक, आंध्र प्रदेश</p>
-                                <button class="btn btn-outline-primary mt-2 w-100">विस्तृत जानकारी</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card crop-card">
-                            <div class="card-body">
-                                <h5 class="card-title">मूंग दाल</h5>
-                                <div class="text-center my-3">
-                                    <i class="fas fa-seedling fa-3x" style="color: #8bc34a;"></i>
-                                </div>
-                                <p><i class="fas fa-rupee-sign me-2"></i><strong>अनुमानित लाभ:</strong> <span class="text-success">₹35,000 प्रति एकड़</span></p>
-                                <p><i class="fas fa-clock me-2"></i><strong>समय अवधि:</strong> 60-70 दिन</p>
-                                <p><i class="fas fa-tint me-2"></i><strong>पानी की आवश्यकता:</strong> कम</p>
-                                <p><i class="fas fa-map-marker-alt me-2"></i><strong>उपयुक्त क्षेत्र:</strong> उत्तर प्रदेश, मध्य प्रदेश, राजस्थान</p>
-                                <button class="btn btn-outline-primary mt-2 w-100">विस्तृत जानकारी</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card crop-card">
-                            <div class="card-body">
-                                <h5 class="card-title">भिंडी</h5>
-                                <div class="text-center my-3">
-                                    <i class="fas fa-leaf fa-3x" style="color: #4caf50;"></i>
-                                </div>
-                                <p><i class="fas fa-rupee-sign me-2"></i><strong>अनुमानित लाभ:</strong> <span class="text-success">₹38,000 प्रति एकड़</span></p>
-                                <p><i class="fas fa-clock me-2"></i><strong>समय अवधि:</strong> 45-50 दिन</p>
-                                <p><i class="fas fa-tint me-2"></i><strong>पानी की आवश्यकता:</strong> मध्यम</p>
-                                <p><i class="fas fa-map-marker-alt me-2"></i><strong>उपयुक्त क्षेत्र:</strong> गुजरात, पश्चिम बंगाल, बिहार</p>
-                                <button class="btn btn-outline-primary mt-2 w-100">विस्तृत जानकारी</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center mt-4">
-                    <button class="btn btn-primary me-2"><i class="fas fa-download me-2"></i>रिपोर्ट डाउनलोड करें</button>
-                    <button class="btn btn-outline-secondary" id="reset-form"><i class="fas fa-redo me-2"></i>नई जानकारी दर्ज करें</button>
-                </div>
-            </div>
-
-            <!-- Additional Information Section -->
-            <div class="row mb-5">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">बाजार भाव</div>
-                        <div class="card-body">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>फसल</th>
-                                        <th>मूल्य (प्रति क्विंटल)</th>
-                                        <th>परिवर्तन</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>गेहूँ</td>
-                                        <td>₹2,100</td>
-                                        <td class="text-success">+2%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>चावल</td>
-                                        <td>₹1,850</td>
-                                        <td class="text-danger">-1%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>टमाटर</td>
-                                        <td>₹800</td>
-                                        <td class="text-success">+5%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>आलू</td>
-                                        <td>₹600</td>
-                                        <td class="text-success">+3%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-header">मौसम पूर्वानुमान</div>
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h5 class="card-title mb-0">अगले 7 दिन</h5>
-                                <span class="badge bg-primary">मध्यम वर्षा संभावना</span>
-                            </div>
-                            <div class="row text-center">
-                                <div class="col">
-                                    <p>आज</p>
-                                    <i class="fas fa-sun fs-1 text-warning"></i>
-                                    <p>32°C</p>
-                                </div>
-                                <div class="col">
-                                    <p>कल</p>
-                                    <i class="fas fa-cloud-sun fs-1 text-secondary"></i>
-                                    <p>31°C</p>
-                                </div>
-                                <div class="col">
-                                    <p>परसों</p>
-                                    <i class="fas fa-cloud-rain fs-1 text-info"></i>
-                                    <p>28°C</p>
-                                </div>
-                            </div>
-                            <div class="mt-3">
-                                <p><i class="fas fa-info-circle me-2"></i>अगले सप्ताह हल्की से मध्यम वर्षा की संभावना है, बुवाई के लिए अच्छा समय है।</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <hr class="my-4 bg-light">
+            <p>© 2023 KrishiYojak. सर्वाधिकार सुरक्षित।</p>
         </div>
-
-        <!-- Footer -->
-        <footer class="text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 mb-3">
-                        <h5>KrishiYojak</h5>
-                        <p>किसानों की बेहतरी के लिए समर्पित</p>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <h5>जरूरी लिंक</h5>
-                        <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">हमारे बारे में</a></li>
-                            <li><a href="#" class="text-white">नियम और शर्तें</a></li>
-                            <li><a href="#" class="text-white">गोपनीयता नीति</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <h5>संपर्क करें</h5>
-                        <p><i class="fas fa-phone me-2"></i>+91 9876543210</p>
-                        <p><i class="fas fa-envelope me-2"></i>support@krishiyojak.com</p>
-                    </div>
-                </div>
-                <hr class="my-4 bg-light">
-                <p>© 2023 KrishiYojak. सर्वाधिकार सुरक्षित।</p>
-            </div>
-        </footer>
-    </div>
+    </footer>
 
     <!-- Bootstrap & jQuery JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -716,44 +649,13 @@
                 gj: ['अहमदाबाद', 'सूरत', 'वडोदरा', 'राजकोट', 'भावनगर', 'जामनगर', 'जूनागढ़', 'आणंद', 'गांधीनगर', 'कच्छ'],
                 tg: ['हैदराबाद', 'वारंगल', 'निजामाबाद', 'खम्मम', 'करीमनगर', 'महबूबनगर', 'नालगोंडा', 'सिद्दिपेट', 'संगारेड्डी', 'मेदक'],
                 ap: ['विशाखापत्तनम', 'विजयवाड़ा', 'गुंटूर', 'नेल्लोर', 'कुरनूल', 'काकिनाडा', 'तिरुपति', 'अनंतपुर', 'चित्तूर', 'कडपा'],
-                tn: ['चेन्नई', 'कोयंबटूर', 'मदुरै', 'तिरुचिरापल्ली', 'सलेम', 'तिरुनलवेली', 'वेल्लोर', 'इरोड', 'थूथुकुडी', 'डिंडिगुल'],
+                tn: ['चेन्नई', 'कोयंबटूर', 'मदुरै', 'तिरुचिरापल्ली', 'सलेम', 'तिरुनलवेली', 'वेल्लोर', 'इरोड', 'थूथुकडी', 'डिंडिगुल'],
                 kr: ['बेंगलुरु', 'मैसूर', 'हुबली', 'मंगलौर', 'बेलगावी', 'विजयपुरा', 'शिवमोग्गा', 'तुमकुर', 'रायचूर', 'बीदर'],
                 rj: ['जयपुर', 'जोधपुर', 'उदयपुर', 'कोटा', 'अजमेर', 'भरतपुर', 'बीकानेर', 'अलवर', 'सीकर', 'झुंझुनू'],
                 mp: ['भोपाल', 'इंदौर', 'जबलपुर', 'ग्वालियर', 'उज्जैन', 'सागर', 'रीवा', 'सतना', 'रतलाम', 'देवास'],
                 wb: ['कोलकाता', 'हावड़ा', 'दुर्गापुर', 'आसनसोल', 'सिलीगुड़ी', 'बर्द्धमान', 'मालदा', 'हुगली', 'नदिया', 'मुर्शिदाबाद'],
                 hr: ['फरीदाबाद', 'गुरुग्राम', 'पानीपत', 'अंबाला', 'यमुनानगर', 'रोहतक', 'हिसार', 'करनाल', 'सिरसा', 'झज्जर']
             };
-
-            // Login/Signup functionality
-            $('#show-signup').on('click', function(e) {
-                e.preventDefault();
-                $('#loginForm').hide();
-                $('#signupForm').show();
-            });
-
-            $('#show-login').on('click', function(e) {
-                e.preventDefault();
-                $('#signupForm').hide();
-                $('#loginForm').show();
-            });
-
-            $('#loginForm').on('submit', function(e) {
-                e.preventDefault();
-                $('#login-page').hide();
-                $('#main-website').show();
-            });
-
-            $('#signupForm').on('submit', function(e) {
-                e.preventDefault();
-                $('#login-page').hide();
-                $('#main-website').show();
-            });
-
-            $('#logout-btn').on('click', function(e) {
-                e.preventDefault();
-                $('#main-website').hide();
-                $('#login-page').show();
-            });
 
             // Form submission handler
             $('#cropPlanningForm').on('submit', function(e) {
@@ -791,7 +693,7 @@
                         districtSelect.append($('<option>', {
                             value: district.toLowerCase(),
                             text: district
-                        });
+                        }));
                     });
                 }
             });
